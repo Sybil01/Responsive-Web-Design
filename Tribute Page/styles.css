@@ -1,0 +1,40 @@
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0px;
+    font-family: Tahoma, sans serif;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+  }
+  
+  main{
+    background-color: rgb(245, 245, 245);
+    margin: 20px 3px;
+  }
+  
+  h1{
+    padding-top: 30px;
+  }
+  
+  .foto{
+    padding: 6px;
+    margin: 10px 10px;
+    background-color: white;
+  }
+  
+  img{
+    width: 100%;
+    max-width: 100%;
+    height:auto;
+    max-height: 600px;
+    margin: center;
+    object-fit: cover;
+    border-radius: 3px;
+    display: block;
+  }
+  
+  ul, ol{
+   text-align: left;
+  }
+  

@@ -1,0 +1,382 @@
+html{
+    scroll-behavior: smooth !important;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Montserrat", sans-serif;
+    box-sizing: border-box;
+}
+
+.container{
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+
+}
+
+section {
+    height: 100vh;
+    scroll-snap-align: start;
+}
+
+body{
+    overflow: hidden;
+}
+ 
+/* Header */ 
+#header{
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    text-align: left;
+    background-color: rgb(100% 100% 100%);
+    box-shadow: 0px 15px 25px rgba(0,0,0,0.08);
+  }
+  
+.logo{
+    width: 30vw;
+}
+
+.logo img{
+    max-width: 150px;
+    min-width: 100px;
+    width: 100%;
+    height: 100%;
+    align-items: left;
+}
+
+/* Navbar */
+
+ul, ol{
+    list-style: none;
+} 
+
+.nav li:hover > ul {
+    display: block;
+} 
+
+.nav li a{
+    color: black;
+    background-color: white;
+    text-decoration: none;
+    padding:10px 15px;
+    display: block;
+} 
+
+.nav li a:hover {
+    background-color: #eeeeee;
+    box-shadow: 0px 15px 25px rgba(0,0,0,0.30);
+}
+
+.nav > li{
+    float:left;
+} 
+
+.nav li ul {
+    display: none;
+    position: absolute;
+
+}
+
+
+/*Home*/
+.Home{
+    background-image: linear-gradient(rgba(255,255,255, 0.5) 30%, rgba(19, 5, 5, 0.4)  96%);
+    background-size: cover;
+    padding: 2rem;
+}
+
+/*Slider de imagenes*/
+.slider-general{
+    max-width: 60rem;
+    margin: 0 auto;
+    margin-top: 8%;
+}
+
+.slider{
+    display: flex;
+    aspect-ratio: 16 / 9;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem -075rem hsla(0, 0%, 0%, 0.25);
+    border-radius: 0.5rem;
+}
+
+.slider, img{
+    flex: 1 0 100%;
+    object-fit: cover;
+}
+
+.slider-nav {
+    display: flex;
+    column-gap: 1rem;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    position: relative;
+}
+
+.slider-nav > a {
+    width: 20rem;
+    height: 1rem;
+    border-radius: 0%;
+    background-color: #fff;
+    opacity: 0.75;
+    transition: opacity ease 250ms;
+}
+
+.slider-nav > a:hover{
+    opacity: 1;
+    width: 21rem;
+}
+
+/* Animaciòn de sliders*/
+.contents{
+    width: 50%;
+    height: 30%;
+    top: 55%;
+    right: 45%;
+    position: absolute;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    opacity: 0;
+    transition: 0.6s;
+}
+
+.contents:hover{
+    opacity: 1;
+}
+
+.contents h1{
+    font-size: 45px;
+    color: #ffe100;
+    margin-bottom: 15px;
+}
+
+.contents p{
+    font-size: 30px;
+    color: #fff
+}
+
+/*Media fix*/
+@media (max-width: 966px){
+    .slider-general{
+        position: relative;
+        max-width: 48rem;
+        margin: 0 auto;
+        margin-top: 10%;
+    }
+
+    .contents{
+        width: 50%;
+        height: 40%;
+        top: 55%;
+        right: 55%;
+        position: absolute;
+        background: rgba(0,0,0,0.6);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        opacity: 1;
+        transition: 0.6s;
+    }
+}
+
+@media (max-width: 866px){
+    .slider-general{
+        position: relative;
+        max-width: 48rem;
+        margin: 0 auto;
+        margin-top: 15%;
+    }
+
+    .contents{
+        width: 50%;
+        height: 55%;
+        top: 40%;
+        right: 45%;
+        position: absolute;
+        background: rgba(0,0,0,0.6);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        opacity: 1;
+        transition: 0.6s;
+    }
+}
+
+/*Page-1*/
+.Page{
+    background-color: rgb(100% 100% 100%);
+    background-size: cover;
+}
+
+#Sedes{
+    padding-top: 100px;
+}
+
+.Sedes{
+    padding-bottom: 10px;
+}
+
+.Elementos{
+    margin: 10px;
+    padding-left: 110px;
+    padding-right: 100px;
+    display: inline-block;
+}
+
+.Elementos:hover{
+    background-color: #eeeeee;
+    border-radius: 5px;
+}
+
+.Elementos, h2{
+    text-align: center;
+}
+
+.Descripcion{
+    display: inline-block;
+  }
+
+.Categoria {
+    text-align: left
+}
+  
+p {
+    display: inline-block;
+}
+
+.img-sede{
+    border-radius: 5px;
+    object-fit: cover;
+    width: 80%;
+    border: 3px solid rgb(255, 247, 233);
+}
+
+@media (max-width: 1115px){
+    .Elementos{
+        margin: 1%;
+        max-width: 80%;
+        padding: 1%;
+        font-size: 15px;
+    }
+
+    .Sedes{
+        font-size: 15px;
+    }
+
+}
+
+@media (max-width: 945px){
+    .imagen{
+        display: inline-block;
+    }
+
+    .texto{
+        display: inline-block;
+    }
+
+    .img-sede{
+        width: 150px;
+    }
+
+    .texto > p {
+        padding-bottom: 0px;
+    }
+    .texto > h2, p {
+        font-size: 16px;
+        text-align: left;
+        margin-bottom: 10px;
+    }
+
+    .Sedes{
+        font-size: 10px;
+    }
+
+    .Sedes > h1{
+        text-align: left;
+        margin-left: 150px;
+    }
+
+}
+
+/* Noticias */
+.Noticias{
+    display: block;
+    padding-top: 10%;
+    margin-left: 4%;
+}
+
+.bloque-noticias{
+    display: block;
+    margin: 4%;
+}
+
+.noticia{
+    display: inline-block;
+    aspect-ratio: 2 / 3;
+    overflow: hidden;
+    margin: 10px;
+    margin-right: 6%;
+    max-width: 25rem;
+    max-height: 29rem;
+    box-shadow: 0 1.5rem 3rem -75rem hsla(0, 0%, 0%, 0.25);
+    border-radius: 0.2rem;
+    background-color: rgb(100% 100% 90%)
+}
+
+.Imagen-noticia > img{
+    display: block;
+    max-width: 25rem;
+}
+
+.Titulo-noticia{
+    margin-top: 6px;
+}
+
+.texto-noticia{
+    margin-top: 12px;
+    margin: 15px;
+}
+
+.noticia:hover{
+    box-shadow: 0px 15px 25px rgba(0,0,0,0.30);
+}
+
+/* Footer */
+footer{
+    width: 100%;
+    display: block;
+    text-align: right;
+    background-color: #dddddd;
+    scroll-snap-align: end;
+}
+  
+footer ul{
+    display: flex;
+    justify-content: flex-end;
+  
+}
+  
+footer ul li {
+    padding: 0 10px;
+}
+  
+a{
+    color: black;
+    text-decoration: none;
+}
